@@ -101,7 +101,7 @@ export const connectToSocket = (server) => {
 
                     return [room, isFound];
 
-                }, ['', false]);
+                } , ['', false]);
 
             if (found === true) {
                 if (messages[matchingRoom] === undefined) {
