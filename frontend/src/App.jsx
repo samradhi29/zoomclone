@@ -5,7 +5,7 @@ import Authentication from './pages/Authenticationpage';
 import { AuthProvider } from './contexts/Authcontext';
 import VideoMeetComponent from './pages/VideoMeet';
 import HomeComponent from './pages/Home.jsx';
-import History from './pages/history';
+// import History from './pages/history';
 
 function App() {
   return (
