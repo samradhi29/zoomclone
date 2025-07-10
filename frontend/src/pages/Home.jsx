@@ -3,7 +3,7 @@ import withAuth from '../utils/withAuth';
 import { useNavigate } from 'react-router-dom';
 import "../App.css";
 import { Button, TextField } from '@mui/material';
-import { AuthContext } from '../contexts/AuthContext';
+import { AuthContext } from '../contexts/AuthContext.jsx';
 
 function HomeComponent() {
     const navigate = useNavigate();
