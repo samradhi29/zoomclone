@@ -398,6 +398,7 @@ export default function VideoMeetComponent() {
     }, [screen])
     let handleScreen = () => {
         setScreen(!screen);
+        
     }
 
     let handleEndCall = () => {
