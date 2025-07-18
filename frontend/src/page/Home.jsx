@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
-import withAuth from '../utils/withAuth';
+import withAuth from '../utils/withAuth.jsx';
 import { useNavigate } from 'react-router-dom';
 import "../App.css";
 import { Button, TextField, IconButton } from '@mui/material';
 import RestoreIcon from '@mui/icons-material/Restore';
-import { AuthContext } from '../contexts/AuthContext.jsx';
+import { AuthContext } from '../context/AtuhContext'
 
 function HomeComponent() {
     const navigate = useNavigate();
