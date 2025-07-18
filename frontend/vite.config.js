@@ -6,10 +6,14 @@ export default defineConfig({
   server: {
     proxy: {
       "/socket.io": {
-        target: "http://localhost:8000",
-        ws: true, // WebSocket support
+        target:  "https://zoomclone-15445456.onrender.com",
+        ws: true,
         changeOrigin: true
       }
+    },
+    // Add these lines
+    headers: {
+      'Content-Type': 'application/javascript'
     }
   }
 });
