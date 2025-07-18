@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "vite": "^7.0.5"
+  },
+  "dependencies": {
+    "react-scripts": "^5.0.1"
   }
 }
