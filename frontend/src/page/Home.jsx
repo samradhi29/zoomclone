@@ -26,11 +26,12 @@ function HomeComponent() {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
+                
                 padding: "16px 32px",
                 boxShadow: "0 4px 8px rgba(0,0,0,0.1)"
             }}>
                 <h2 style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600 }}>
-                    Apna Video Call
+                  samradhi's video call
                 </h2>
 
                 <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
@@ -84,7 +85,7 @@ function HomeComponent() {
                         marginBottom: "24px",
                         fontFamily: "Poppins, sans-serif"
                     }}>
-                        Providing Quality Video Calls Just Like Quality Education
+                        Providing Quality Video Calls.
                     </h2>
 
                     <div style={{ display: 'flex', gap: "16px", alignItems: "center" }}>
