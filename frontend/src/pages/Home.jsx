@@ -2,7 +2,8 @@ import React, { useContext, useState } from 'react';
 import withAuth from '../utils/withAuth';
 import { useNavigate } from 'react-router-dom';
 import "../App.css";
-import { Button, TextField } from '@mui/material';
+import { Button, TextField, IconButton } from '@mui/material';
+import RestoreIcon from '@mui/icons-material/Restore';
 import { AuthContext } from '../contexts/AuthContext.jsx';
 
 function HomeComponent() {
@@ -11,6 +12,7 @@ function HomeComponent() {
     const { addToUserHistory } = useContext(AuthContext);
 
     const handleJoinVideoCall = async () => {
+        if (!meetingCode.trim()) return;
         await addToUserHistory(meetingCode);
         navigate(`/${meetingCode}`);
     };
@@ -27,23 +29,33 @@ function HomeComponent() {
                 padding: "16px 32px",
                 boxShadow: "0 4px 8px rgba(0,0,0,0.1)"
             }}>
-                <h2 style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600 }}>Apna Video Call</h2>
-                <Button
-                    variant="contained"
-                    onClick={() => {
-                        localStorage.removeItem("token");
-                        navigate("/auth");
-                    }}
-                    style={{
-                        backgroundColor: "#ffffff",
-                        color: "#0d47a1",
-                        fontWeight: "bold",
-                        textTransform: "none",
-                        borderRadius: "8px"
-                    }}
-                >
-                    Logout
-                </Button>
+                <h2 style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600 }}>
+                    Apna Video Call
+                </h2>
+
+                <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                    <IconButton onClick={() => navigate("/history")} style={{ color: "#ffffff" }}>
+                        <RestoreIcon />
+                    </IconButton>
+                    <p style={{ margin: 0, fontFamily: "Poppins, sans-serif" }}>History</p>
+
+                    <Button
+                        variant="contained"
+                        onClick={() => {
+                            localStorage.removeItem("token");
+                            navigate("/auth");
+                        }}
+                        style={{
+                            backgroundColor: "#ffffff",
+                            color: "#0d47a1",
+                            fontWeight: "bold",
+                            textTransform: "none",
+                            borderRadius: "8px"
+                        }}
+                    >
+                        Logout
+                    </Button>
+                </div>
             </div>
 
             {/* Main Container */}
@@ -72,7 +84,7 @@ function HomeComponent() {
                         marginBottom: "24px",
                         fontFamily: "Poppins, sans-serif"
                     }}>
-                        High-Quality Video Calls, Simplified.
+                        Providing Quality Video Calls Just Like Quality Education
                     </h2>
 
                     <div style={{ display: 'flex', gap: "16px", alignItems: "center" }}>
